@@ -4,9 +4,7 @@ const app = express();
 import cors from 'cors';
 const PORT = process.env.PORT || 4000;
 
-app.use(cors({
-    origin:["http://localhost:4000/fetchData",'https://api.wazirx.com/api/v2/tickers']
-}));
+app.use(cors());
 
 // Define a route to fetch and process data
 app.get('/fetchData', async (req, res) => {
